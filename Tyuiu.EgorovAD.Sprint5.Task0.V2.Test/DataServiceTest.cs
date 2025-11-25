@@ -8,7 +8,7 @@ namespace Tyuiu.EgorovAD.Sprint5.Task0.V2.Test
         public void TestMethod1()
         {
 
-            string path = @"C:\Users\Xeon\source\repos\Tyuiu.EgorovAD.Sprint5\Tyuiu.EgorovAD.Sprint5.Task0.V2\bin\Debug\net8.0\OutPutFileTask0.txt";
+            string path = @"C:\Users\Xeon\source\repos\Tyuiu.EgorovAD.Sprint5\Tyuiu.EgorovAD.Sprint5.Task0.V2\bin\Debug\OutPutFileTask0.txt";
 
             FileInfo file = new FileInfo(path);
 
