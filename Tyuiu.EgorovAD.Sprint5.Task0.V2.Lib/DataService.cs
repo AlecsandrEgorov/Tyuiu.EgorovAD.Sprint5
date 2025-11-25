@@ -6,15 +6,17 @@ namespace Tyuiu.EgorovAD.Sprint5.Task0.V2.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
-            
+            string outputFile = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
+
             double y = Math.Pow(Math.Exp(1), x) / x;
 
             y = Math.Round(y, 3);
 
-            File.WriteAllText(path, Convert.ToString(y));   
+            File.WriteAllText(outputFile, Convert.ToString(y));   
             
-            return path;
+            return outputFile;
+
+
         }
     }
 }
