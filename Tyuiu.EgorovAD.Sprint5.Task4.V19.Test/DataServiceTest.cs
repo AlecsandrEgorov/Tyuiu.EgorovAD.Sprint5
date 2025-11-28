@@ -1,5 +1,5 @@
-﻿using Tyuiu.EgorovAD.Sprint5.Task3.V1.Lib;
-namespace Tyuiu.EgorovAD.Sprint5.Task3.V1.Test
+﻿using Tyuiu.EgorovAD.Sprint5.Task4.V19.Lib;
+namespace Tyuiu.EgorovAD.Sprint5.Task4.V19.Test
 {
     [TestClass]
     public sealed class DataServiceTest
@@ -7,7 +7,7 @@ namespace Tyuiu.EgorovAD.Sprint5.Task3.V1.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\DataSprint5\OutPutFileTask4V19.txt";
+            string path = @"C:\DataSprint5\InPutDataFileTask4V19.txt";
 
             FileInfo file = new FileInfo(path);
 
