@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Text;
 using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.EgorovAD.Sprint5.Task3.V1.Lib
 {
@@ -12,7 +13,7 @@ namespace Tyuiu.EgorovAD.Sprint5.Task3.V1.Lib
 
             z = Math.Round(z, 2);
 
-            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Create)))
+            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Create), Encoding.UTF8))
             {
                 writer.Write(BitConverter.GetBytes(z));    
             }
