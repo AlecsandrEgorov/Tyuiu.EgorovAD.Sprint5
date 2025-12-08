@@ -10,9 +10,9 @@ namespace Tyuiu.EgorovAD.Sprint5.Task6.V16.Lib
         {
 
 
-            string filePath = Path.Combine(@"C:\DataSprint5", "InPutDataFileTask6V16.txt");
 
-            string text = File.ReadAllText(filePath);
+
+            string text = File.ReadAllText(path);
 
 
 
