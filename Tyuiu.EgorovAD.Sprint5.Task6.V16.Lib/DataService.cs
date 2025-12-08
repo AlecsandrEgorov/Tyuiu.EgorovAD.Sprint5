@@ -8,11 +8,11 @@ namespace Tyuiu.EgorovAD.Sprint5.Task6.V16.Lib
     {
         public int LoadFromDataFile(string path)
         {
+            string outputFile = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
 
 
-            string filePath = Path.Combine(@"C:\DataSprint5", "InPutDataFileTask6V16.txt");
 
-            string text = File.ReadAllText(filePath);
+            string text = File.ReadAllText(path);
 
 
 
@@ -30,6 +30,7 @@ namespace Tyuiu.EgorovAD.Sprint5.Task6.V16.Lib
 
                 }
             }
+            File.WriteAllText(outputFile, Convert.ToString(englishWordCount));
             return englishWordCount;
         }
 
