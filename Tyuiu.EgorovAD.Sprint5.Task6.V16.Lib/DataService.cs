@@ -8,24 +8,43 @@ namespace Tyuiu.EgorovAD.Sprint5.Task6.V16.Lib
     {
         public int LoadFromDataFile(string path)
         {
+
+
+            string filePath = Path.Combine(@"C:\DataSprint5", "InPutDataFileTask6V16.txt");
+
+            string text = File.ReadAllText(filePath);
+
+
+
+            char[] separators = " .,!?;:\t\n\r()[]{}'\"".ToCharArray();
+            string[] words = text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+
             int englishWordCount = 0;
-            using (StreamReader reader = new StreamReader(path))
+
+
+            foreach (string word in words)
             {
-                string line;
-                char[] separators = " .,!?;:\t\n\r()[]{}'\"".ToCharArray();
-
-
-                while ((line = reader.ReadLine()) != null)
+                if (IsEnglishWordSimple(word))
                 {
-                    for ()
-                        if (IsEnglishWordSimple(word))
-                        {
-                            englishWordCount++;
+                    englishWordCount++;
 
-                        }
                 }
             }
-            return 6;
+            return englishWordCount;
         }
+
+        static bool IsEnglishWordSimple(string word)
+        {
+
+            foreach (char c in word)
+            {
+                if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
+                {
+                    return false;
+                }
+            }
+            return word.Length > 0;
+        }
+
     }
 }
