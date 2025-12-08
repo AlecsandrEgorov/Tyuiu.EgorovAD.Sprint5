@@ -29,7 +29,7 @@ namespace Tyuiu.EgorovAD.Sprint5.Task5.V8.Lib
                     }
                 }
             }
-            return 3.36;
+            return -3.36;
         }
     }
 }
