@@ -45,7 +45,7 @@ namespace Tyuiu.EgorovAD.Sprint5.Task7.V3.Lib
 
                     File.AppendAllText(outputFile, strline + Environment.NewLine, Encoding.UTF8);
 
-                    totalResult.AppendLine(strline);
+                    totalResult.Append(strline);
                 }
             }
 
