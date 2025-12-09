@@ -9,6 +9,7 @@ internal class Program
         Console.WriteLine("***************************************************************************");
 
         string path = @"C:\DataSprint5\InPutDataFileTask7V3.txt";
+        string outputFile = Path.Combine(Path.GetTempPath(), "OutPutFileTask7.txt");
 
         Console.WriteLine("Данные находятся в " + path);
 
@@ -17,9 +18,12 @@ internal class Program
         Console.WriteLine("***************************************************************************");
 
         Console.WriteLine("Находится в файле: ");
+        Console.WriteLine(outputFile);
+        Console.WriteLine("Результат: ");
 
         string res = ds.LoadDataAndSave(path);
 
-        Console.ReadKey();
+        Console.WriteLine(res);
+
     }
 }
