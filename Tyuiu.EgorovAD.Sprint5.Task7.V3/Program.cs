@@ -20,8 +20,6 @@ internal class Program
 
         string res = ds.LoadDataAndSave(path);
 
-        Console.WriteLine("Файл " + res);
-        Console.WriteLine("Создан");
         Console.ReadKey();
     }
 }

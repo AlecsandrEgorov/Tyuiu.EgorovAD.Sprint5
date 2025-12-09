@@ -15,28 +15,24 @@ namespace Tyuiu.EgorovAD.Sprint5.Task7.V3.Lib
         {
             string outputFile = Path.Combine(Path.GetTempPath(), "OutPutFileTask7.txt");
 
-            FileInfo fileInfo = new FileInfo(outputFile);
-
-            bool fileExist = fileInfo.Exists;
-
-            if (fileExist)
+            if (File.Exists(outputFile))
             {
                 File.Delete(outputFile);
             }
 
+            StringBuilder totalResult = new StringBuilder();
             string strline = "";
 
-            using (StreamReader sr = new StreamReader(path))
+            using (StreamReader sr = new StreamReader(path, Encoding.UTF8))
             {
                 string line;
 
                 while ((line = sr.ReadLine()) != null)
                 {
-                    for (int i = 0; i < line.Length; i++)
+                    strline = "";
+
+                    foreach (char currentChar in line)
                     {
-                        char currentChar = line[i];
-
-
                         bool isRussianLetter = (currentChar >= 'А' && currentChar <= 'Я') ||
                                                (currentChar >= 'а' && currentChar <= 'я') ||
                                                currentChar == 'Ё' || currentChar == 'ё';
@@ -46,12 +42,14 @@ namespace Tyuiu.EgorovAD.Sprint5.Task7.V3.Lib
                             strline += currentChar;
                         }
                     }
-                }
-                File.AppendAllText(outputFile, strline + Environment.NewLine);
-                strline = "";
 
+                    File.AppendAllText(outputFile, strline + Environment.NewLine, Encoding.UTF8);
+
+                    totalResult.AppendLine(strline);
+                }
             }
-            return strline;
+
+            return totalResult.ToString();
         }
     }
 }
