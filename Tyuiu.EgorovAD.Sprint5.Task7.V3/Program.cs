@@ -1,10 +1,8 @@
-﻿using System.IO;
-using Tyuiu.EgorovAD.Sprint5.Task7.V13.Lib;
+﻿using Tyuiu.EgorovAD.Sprint5.Task7.V3.Lib;
 internal class Program
 {
     private static void Main(string[] args)
     {
-
         DataService ds = new DataService();
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
@@ -25,8 +23,5 @@ internal class Program
         Console.WriteLine("Файл " + res);
         Console.WriteLine("Создан");
         Console.ReadKey();
-
-
-
     }
 }

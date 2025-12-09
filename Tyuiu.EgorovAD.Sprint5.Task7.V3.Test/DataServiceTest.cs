@@ -1,5 +1,5 @@
-﻿using Tyuiu.EgorovAD.Sprint5.Task7.V13.Lib;
-namespace Tyuiu.EgorovAD.Sprint5.Task7.V13.Test
+﻿using Tyuiu.EgorovAD.Sprint5.Task7.V3.Lib;
+namespace Tyuiu.EgorovAD.Sprint5.Task7.V3.Test
 {
     [TestClass]
     public sealed class DataServiceTest
@@ -7,7 +7,6 @@ namespace Tyuiu.EgorovAD.Sprint5.Task7.V13.Test
         [TestMethod]
         public void TestMethod1()
         {
-
         }
     }
 }

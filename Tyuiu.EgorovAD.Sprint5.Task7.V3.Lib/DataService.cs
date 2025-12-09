@@ -7,7 +7,7 @@ using System.Text;
 using tyuiu.cources.programming.interfaces.Sprint5;
 using static System.Net.Mime.MediaTypeNames;
 using System.Text.RegularExpressions;
-namespace Tyuiu.EgorovAD.Sprint5.Task7.V13.Lib
+namespace Tyuiu.EgorovAD.Sprint5.Task7.V3.Lib
 {
     public class DataService : ISprint5Task7V3
     {
@@ -30,7 +30,7 @@ namespace Tyuiu.EgorovAD.Sprint5.Task7.V13.Lib
             {
                 string line;
 
-                while ((line = sr.ReadLine()) != null )
+                while ((line = sr.ReadLine()) != null)
                 {
                     for (int i = 0; i < line.Length; i++)
                     {
@@ -47,9 +47,9 @@ namespace Tyuiu.EgorovAD.Sprint5.Task7.V13.Lib
                         }
                     }
                 }
-                    File.AppendAllText(outputFile, strline + Environment.NewLine);
-                    strline = "";
-                
+                File.AppendAllText(outputFile, strline + Environment.NewLine);
+                strline = "";
+
             }
             return strline;
         }
